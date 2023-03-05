@@ -9,7 +9,7 @@ Utility to valide objects in TypeScript
 
 ### Validating an object
 
-```
+```typescript
 interface User {
   name: string;
   age?: number;
@@ -32,7 +32,7 @@ const isValid = isValid<User>(user, validationRules); // false
 
 ### Checks if validation rules are conforming to the interface :policeman:
 
-```
+```typescript
 const user = {name: 'Maximus'};
 const validationRules = {fullName: [isNotUndefined]}
 
@@ -73,7 +73,7 @@ validate<User>(user, validationRules);
 
 Providing custom validator functions are as easy as :1234:
 
-```
+```typescript
 const user = {name: 'Maximus'};
 const validationRules = {name: [name => name === 'Maximus', name => console.log(name)]};
 
